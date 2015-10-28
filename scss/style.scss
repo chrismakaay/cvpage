@@ -1,5 +1,7 @@
 $main-family: 'Open Sans', sans-serif;
 $primary-color: #333;
+$light-color: #fff;
+$link-color: #ff4f00;
 $video-content-bg: url('../img/bg/lines.gif');
 $video-shadow-top: url('../img/shadow/video_top.png');
 $video-shadow-bottom: url('../img/shadow/video_bottom.png');
@@ -10,34 +12,60 @@ body {
   color: $primary-color;
 }
 
+a {
+  color: $link-color;
+}
+
 /* HEADER */
 header {
   height: 80px;
-  background: #fff;
   position: relative;
 
-  h1 {
-    margin: 0;
-    font: bold 15px $main-family;
-  }
   nav {
+    display: block;
+    width: 1000px;
     height: 80px;
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin: auto;
+    overflow: hidden;
 
     ul {
+      float: left;
+      width: 400px;
+      padding: 0;
       list-style: none;
 
       li {
-        float: left;
-
         a {
-          font: 400 12px/80px $main-family;
+          display: block;
+          float: left;
+          height: 80px;
+          padding: 0 20px;
+          font: 700 15px/80px $main-family;
+          color: $light-color;
           text-decoration: none;
           text-transform: uppercase;
         }
       }
+      &.left {
+        li {
+          float: right;
+        }
+      }
+      &.right {
+        li {
+          float: left;
+        }
+      }
+    }
+    a.logo {
+      display: block;
+      float: left;
+      width: 200px;
+      height: 80px;
+      text-align: center;
+      text-decoration: none;
+      font: 700 15px/80px $main-family;
+      color: $link-color;
     }
   }
 }
@@ -45,6 +73,7 @@ header {
 /* HOME */
 #home {
   overflow: hidden;
+  margin: 0 0 -80px;
 
   video {
     display: block;

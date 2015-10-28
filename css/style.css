@@ -2,31 +2,51 @@ body {
   font: 14px "Open Sans", sans-serif;
   color: #333; }
 
+a {
+  color: #ff4f00; }
+
 /* HEADER */
 header {
   height: 80px;
-  background: #fff;
   position: relative; }
-  header h1 {
-    margin: 0;
-    font: bold 15px "Open Sans", sans-serif; }
   header nav {
+    display: block;
+    width: 1000px;
     height: 80px;
-    position: absolute;
-    right: 0;
-    top: 0; }
+    margin: auto;
+    overflow: hidden; }
     header nav ul {
+      float: left;
+      width: 400px;
+      padding: 0;
       list-style: none; }
-      header nav ul li {
+      header nav ul li a {
+        display: block;
+        float: left;
+        height: 80px;
+        padding: 0 20px;
+        font: 700 15px/80px "Open Sans", sans-serif;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase; }
+      header nav ul.left li {
+        float: right; }
+      header nav ul.right li {
         float: left; }
-        header nav ul li a {
-          font: 400 12px/80px "Open Sans", sans-serif;
-          text-decoration: none;
-          text-transform: uppercase; }
+    header nav a.logo {
+      display: block;
+      float: left;
+      width: 200px;
+      height: 80px;
+      text-align: center;
+      text-decoration: none;
+      font: 700 15px/80px "Open Sans", sans-serif;
+      color: #ff4f00; }
 
 /* HOME */
 #home {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0 0 -80px; }
   #home video {
     display: block;
     width: 100%; }

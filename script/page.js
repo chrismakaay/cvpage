@@ -1,6 +1,6 @@
 $(document).ready(function(ev) {
     console.log('document ready', Math.floor(Date.now()));
-    
+
     setHomeInnerHeight();
 });
 
