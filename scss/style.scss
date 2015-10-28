@@ -1,0 +1,134 @@
+$main-family: 'Open Sans', sans-serif;
+$primary-color: #333;
+$video-content-bg: url('../img/bg/lines.gif');
+$video-shadow-top: url('../img/shadow/video_top.png');
+$video-shadow-bottom: url('../img/shadow/video_bottom.png');
+
+
+body {
+  font: 14px $main-family;
+  color: $primary-color;
+}
+
+/* HEADER */
+header {
+  height: 80px;
+  background: #fff;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    font: bold 15px $main-family;
+  }
+  nav {
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    ul {
+      list-style: none;
+
+      li {
+        float: left;
+
+        a {
+          font: 400 12px/80px $main-family;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+/* HOME */
+#home {
+  overflow: hidden;
+
+  video {
+    display: block;
+    width: 100%;
+  }
+  .content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $video-content-bg;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .shadow {
+      display: block;
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      left: 0;
+
+      &.top {
+        background: $video-shadow-top;
+        top: 0;
+      }
+      &.bottom {
+        background: $video-shadow-bottom;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+/* TIMELINE */
+#timeline {
+  padding: 50px 0 100px;
+  background: #f0f2f7;
+
+  h2 {
+    text-align: center;
+  }
+
+  .timeline {
+    .item {
+      h3 {
+        color: #2c3e50;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      h4 {
+        color: #2c3e50;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        bottom: auto;
+        background-color: #272425;
+      }
+    }
+
+    .left {
+      text-align: right;
+
+      .item {
+        &:before {
+          right: -2px;
+        }
+      }
+    }
+    .right {
+      text-align: left;
+
+      .item {
+        &:before {
+          left: -2px;
+        }
+      }
+    }
+  }
+}
